@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --color-primary: #FFCC33;
+  --color-primary-dark: #D9AD2B;
+  --color-primary-light: #FFE599;
+  --color-secondary: #666666;
+  --color-secondary-dark: #333333;
+}
+
+@layer base {
+  body {
+    @apply bg-secondary/5 text-secondary font-sans antialiased;
+  }
+}
+
+.step-card {
+  @apply bg-white rounded-2xl border border-secondary/10 shadow-sm p-6 transition-all duration-300;
+}
+
+.step-card:hover {
+  @apply shadow-md border-primary/30;
+}
+
+.link-btn {
+  @apply inline-flex items-center gap-2 px-4 py-2 bg-secondary/5 hover:bg-secondary/10 text-secondary rounded-lg text-sm font-medium transition-colors;
+}
+
+.primary-btn {
+  @apply inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-dark text-secondary-dark rounded-xl font-bold shadow-sm transition-all active:scale-95;
+}
+
+.sidebar-item-active {
+  @apply bg-primary/10 text-secondary-dark shadow-sm border border-primary/20;
+}
+
+.sidebar-icon-active {
+  @apply bg-primary text-secondary-dark;
+}
